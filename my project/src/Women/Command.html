@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Command</title>
+    <link rel="stylesheet" href="..\..\Style.css">
+    </linkrel>
+    <style>
+        * {
+            font-size: 20px;
+
+        }
+
+        fieldset {
+            margin-top: 0px;
+            padding-top: 0px;
+            position: absolute;
+            top: 0px;
+            width: 1200px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="..\..\Script.js"></script>
+
+    <form action="..\confirmation.html" method="post" oninput="me(), 
+    
+     prixtotal.value=parseInt(price1.value) + parseInt(price2.value) ">
+
+        <fieldset>
+
+            <legend> Command Details</legend>
+            <label for="nom"> First name: <input type="text" name="nom" required id="nom" /> </label> <br></br>
+            <label for="prénom">Last name: <input type="text" name="prénom" required id="prénom" /> </label> <br></br>
+            <label for="adresse"> Full address: </label> <br></br>
+            <label for=""> <textarea name="adresse_postale" id="adresse" required rows="5" cols="20"></textarea>
+            </label> <br></br>
+            <label for="zip code"> Zip code: <input name=“mapage" id="postal" required  /> </label> <br></br>
+            <label for="email"> Email: <input name=“email" id="email" required type="email" /> </label> <br></br>
+            <label> Phone number: <input name=“tel" type="tel" required pattern="[0-9]{12}"
+                    title="the phone number must contain 12 numbers ! (add the country code :) )" /></label> <br></br>
+
+            <label for="p1">product #1 id: </label>
+            <input name="p1" id="p1" value="0"></input>
+            <strong>price: </strong> <output name="price1" id="z" for="p1"></output> <strong>$</strong>
+            <br></br>
+
+
+            <LABEL for="p2">product #2 id:</LABEL>
+            <input name="p2" id="p2" value="0"></input>
+            <strong> price: </strong><output name="price2" id="x" for="p2"> </output> <strong>$</strong>
+
+            <br></br>
+            <div style="display: none;">
+
+                <LABEL for="p2">product three</LABEL>
+                <input name="p2" id="p2" value="0"></input>
+                <strong>prix:</strong><output name="prixp2" id="c" for="p2"> </output> <strong>$</strong>
+                <br></br>
+            </div>
+            <strong>For more than one product, Here's the total price: </strong>
+            <output style="color: maroon; font-size: 35px;" name="prixtotal" id="total" value="parseInt(0)"
+                for="  prixp2"></output> <strong>$</strong>
+
+            <br><br>
+
+            <input type="submit" value="Confirm purchase" />
+            <input type="reset" value="Reset all the informations" />
+
+        </fieldset>
+
+    </form>
+
+</body>
+
+
+</html>
